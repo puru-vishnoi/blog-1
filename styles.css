@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.div-container {
+  position: relative;
+  margin: 150px;
+  padding: 50px;
+  width: 1000px;
+  height: 200px;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexbox-container {
+  top: center;
+  left: center;
+  position: absolute;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.flexbox-item::after {
+  bottom: 2px;
+  right: 2px;
+  height: 20px;
+  width: 10px;
+  border: 2px solid blue;
+  border-radius: 6px;
+  background-color: aqua;
+}
+
+.flexbox-container::before {
+  content: "Flex-Box Container";
+  position: absolute;
+  top: -40px;
+  left: 170px;
+  color: blueviolet;
+  font-size: 1.5em;
+}
+
+.axis {
+  position: absolute;
+}
+
+.cross-axis {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: grey;
+}
+
+.main-axis {
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 100%;
+  background-color: grey;
+}
+
+.axis::after {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 1.2em;
+}
+
+.main-axis::after {
+  position: absolute;
+  content: "Main Axis";
+  color: grey;
+}
+
+.cross-axis::after {
+  white-space: nowrap;
+  content: "Cross Axis";
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: grey;
+}
+
+.flexbox-item {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  margin: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background-color: #dfdfdf;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.flexbox-item::after {
+  position: absolute;
+  color: black;
+  font-size: 15px;
+  top: 10px;
+  right: 15px;
+}
+
+.flexbox-item-1 {
+  min-height: 100px;
+}
+.flexbox-item-2 {
+  min-height: 100px;
+}
+.flexbox-item-3 {
+  min-height: 100px;
+}
+
+.flexbox-item-1::after {
+  content: "1";
+}
+
+.flexbox-item-2::after {
+  content: "2";
+}
+
+.flexbox-item-3::after {
+  content: "3";
+}
